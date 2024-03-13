@@ -9,6 +9,11 @@ var session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var kategoriRouter = require('./routes/kategori');
+var alat_tangkapRouter = require('./routes/alat_tangkap');
+var dpi = require('./routes/dpi');
+var pemilik = require('./routes/pemilik');
+var kapal = require('./routes/kapal');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -39,6 +44,10 @@ app.use(session ({
   app.use('/',indexRouter);
   app.use('/users', usersRouter);
   app.use('/kategori', kategoriRouter);
+  app.use('/alat_tangkap', alat_tangkapRouter);
+  app.use('/dpi', dpi);
+  app.use('/pemilik', pemilik);
+  app.use('/kapal', kapal);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
